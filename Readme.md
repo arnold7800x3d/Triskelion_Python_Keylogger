@@ -25,6 +25,9 @@ The documentation for the project can be found [here](https://github.com/arnold7
 ## System Diagrams
 
 ## Tools
+The tools used in the development of Triskelion include:
+- `Python 3.10.6`
+- `Flask`
 
 ## Installation
 
