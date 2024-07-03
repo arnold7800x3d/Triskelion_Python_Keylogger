@@ -20,7 +20,7 @@ The documentation at this stage is the Project Proposal. It contains 3 chapters 
 - Literature Review - This is the second chapter which contains a summary of related literature involving keyloggers. It reviews the literature and reveals gaps and conflicts in prior research and places the research of Triskelion within the context of the existing literature.
 - Methodology. This is the third chapter of the project proposal. It highlights the methodology and its justification, the methodology diagram, project deliverables and the tools and techniques to be employed for the project.
 
-The documentation for the project can be found [here](https://github.com/Triskelion
+The documentation for the project can be found [here](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/Documentation)
 
 ## System Diagrams
 
@@ -31,5 +31,5 @@ The documentation for the project can be found [here](https://github.com/Triskel
 ## Project Demo
 
 ## Authors
-"Triskelion: A Python Based Software Keylogger for Vulnerability Assessment in the Cyberspace" was undertaken by Arnold Ochieng' for CNS 3104: Computer Networks Project I at Strathmore University in 2024. For amy questions or additional information about this project, contact the author.
+"Triskelion: A Python Based Software Keylogger for Vulnerability Assessment in the Cyberspace" was undertaken by Arnold Ochieng' for CNS 3104: Computer Networks Project I at Strathmore University in 2024. For any questions or additional information about this project, contact the author.
 - [Arnold Ochieng'](https://github.com/arnold7800)
