@@ -24,14 +24,14 @@ The documentation for the project can be found [here](https://github.com/arnold7
 
 ## System Diagrams
 The analysis and design diagrams drawn for the project are:
-- `Use Case Diagram` :
-- `State Transition Diagram` :
-- `System Flowchart` :
-- `Sequence Diagram` :
-- `Misuse case Diagram` :
-- `System architecture` :
+- `Use Case Diagram` : This is a diagram which provides a visual representation of how users interact with the system.
+- `State Transition Diagram` : A diagram to indicate the various states the machine undergoes, the events under the changes from one state to another and the triggers from one state to another.
+- `System Flowchart` : This is a visual representation of various processes, inputs, outputs and decisions that comprise a system.
+- `Sequence Diagram` : This is a visual illustration of the interactions between the various components, objects or actors in a system.
+- `Misuse case Diagram` : This is a diagram which stems from the use case diagram but shows the use cases that can be performed by outside actors in order to harm the system.
+- `System architecture` : Conceptual model that defines the structure, behaviours and the formal representation of the system. 
 
-The analysis and design diagrams for the project can be found [here]
+The analysis and design diagrams for the project can be found [here](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/System%20Diagrams)
 
 ## Tools
 The tools used in the development of Triskelion include:
