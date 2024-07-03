@@ -15,7 +15,7 @@ Ultimately, this research aims to contribute to the cybersecurity field by provi
 - `README.md` : This is the README file for the project.
 
 ## Documentation
-The documentation at this stage is the Project Proposal. It contains 3 chapters i.e.
+The documentation so far at this stage is the Project Proposal. It contains 3 chapters i.e.
 - Introduction: This is the first chapter. It contains the bulk of the proposal as it brings the project to life highlighting the background information, problem statement, objectives, research questions, the justifications, scope, limitations and delimitations of the project. It serves the purpose of lating the foundation for the research to give an understanding on what is known about keyloggers, what the project aims to achieve and its contribution to existing knowledge in the field of cybersecurity.
 - Literature Review - This is the second chapter which contains a summary of related literature involving keyloggers. It reviews the literature and reveals gaps and conflicts in prior research and places the research of Triskelion within the context of the existing literature.
 - Methodology. This is the third chapter of the project proposal. It highlights the methodology and its justification, the methodology diagram, project deliverables and the tools and techniques to be employed for the project.
@@ -23,6 +23,15 @@ The documentation at this stage is the Project Proposal. It contains 3 chapters 
 The documentation for the project can be found [here](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/Documentation)
 
 ## System Diagrams
+The analysis and design diagrams drawn for the project are:
+- `Use Case Diagram` :
+- `State Transition Diagram` :
+- `System Flowchart` :
+- `Sequence Diagram` :
+- `Misuse case Diagram` :
+- `System architecture` :
+
+The analysis and design diagrams for the project can be found [here]
 
 ## Tools
 The tools used in the development of Triskelion include:
@@ -30,9 +39,23 @@ The tools used in the development of Triskelion include:
 - `Flask` : Flask is a lightweight Python web framework used to develop Python-based webapplications as well as Application Programming Interfaces. [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
 
 ## Installation
+To install the required libraties for the project, run
+```
+pip install -r requirements.txt
+```
+
+## Testing
+On the attacking device, execute the `main.py` program.
+```
+python main.py
+```
+On the remote server, which in my case is a Kali Linux Virtual Machine, run 
+```python3 triskelion.py
+```
+Then in the Windows Command Prompt Window check for the "success" messages indicating the successfull capture of data and sending of the files. If the files are sent successfully, they can be seen in the directory chosen to store the files. Further analysis is then carried out.
 
 ## Project Demo
-
+For the project demo, the keylogger executable will be sent as a link to the victim device.
 ## Authors
 "Triskelion: A Python Based Software Keylogger for Vulnerability Assessment in the Cyberspace" was undertaken by Arnold Ochieng' for CNS 3104: Computer Networks Project I at Strathmore University in 2024. For any questions or additional information about this project, contact the author.
 - [Arnold Ochieng'](https://github.com/arnold7800)
