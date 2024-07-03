@@ -11,6 +11,7 @@ Ultimately, this research aims to contribute to the cybersecurity field by provi
 - `Documentation` : Contains the project documentation, which so far is the proposal document.
 - `System Diagrams` : Contains the analyis and design diagrams for the project.
 - `main.py` : This is the actual keylogger program. 
+- `triskelion_server.py` : This is the remote server file created using Flask to handle the storage of received files form the victim's machine.
 - `requirements.txt` : This is a text file containing the python modules needed for the project.
 - `README.md` : This is the README file for the project.
 
@@ -20,7 +21,7 @@ The documentation so far at this stage is the Project Proposal. It contains 3 ch
 - Literature Review - This is the second chapter which contains a summary of related literature involving keyloggers. It reviews the literature and reveals gaps and conflicts in prior research and places the research of Triskelion within the context of the existing literature.
 - Methodology. This is the third chapter of the project proposal. It highlights the methodology and its justification, the methodology diagram, project deliverables and the tools and techniques to be employed for the project.
 
-The documentation for the project can be found [here](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/Documentation)
+The documentation for the project can be found [here.](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/Documentation)
 
 ## System Diagrams
 The analysis and design diagrams drawn for the project are:
@@ -31,12 +32,12 @@ The analysis and design diagrams drawn for the project are:
 - `Misuse case Diagram` : This is a diagram which stems from the use case diagram but shows the use cases that can be performed by outside actors in order to harm the system.
 - `System architecture` : Conceptual model that defines the structure, behaviours and the formal representation of the system. 
 
-The analysis and design diagrams for the project can be found [here](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/System%20Diagrams)
+The analysis and design diagrams for the project can be found [here.](https://github.com/arnold7800x3d/Triskelion_Python_Keylogger/tree/master/System%20Diagrams)
 
 ## Tools
 The tools used in the development of Triskelion include:
 - `Python` :  Python is a popular high-level interpreted programming language that is easy to understand, easy to learn, and very flexible. It is the language used to develop Triskelion. [https://www.python.org/](https://www.python.org/)
-- `Flask` : Flask is a lightweight Python web framework used to develop Python-based webapplications as well as Application Programming Interfaces. [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
+- `Flask` : Flask is a lightweight Python web framework used to develop Python-based webapplications as well as Application Programming Interfaces. It is used in the development of the server that handles the storage of data captured from the victim's machine [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
 
 ## Installation
 To install the required libraties for the project, run
