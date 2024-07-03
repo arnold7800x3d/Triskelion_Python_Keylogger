@@ -50,12 +50,14 @@ On the attacking device, execute the `main.py` program.
 python main.py
 ```
 On the remote server, which in my case is a Kali Linux Virtual Machine, run 
-```python3 triskelion.py
+```
+python3 triskelion.py
 ```
 Then in the Windows Command Prompt Window check for the "success" messages indicating the successfull capture of data and sending of the files. If the files are sent successfully, they can be seen in the directory chosen to store the files. Further analysis is then carried out.
 
 ## Project Demo
-For the project demo, the keylogger executable will be sent as a link to the victim device.
+For the project demo, the keylogger executable will be sent as a link to the victim device. Upon clicking the link, the keylogger executes in the user's background and captures the keystrokes, copied clipboard data and screenshots at set intervals. The data will be stored in files and then sent to a remote server for storage and analysis.
+
 ## Authors
 "Triskelion: A Python Based Software Keylogger for Vulnerability Assessment in the Cyberspace" was undertaken by Arnold Ochieng' for CNS 3104: Computer Networks Project I at Strathmore University in 2024. For any questions or additional information about this project, contact the author.
 - [Arnold Ochieng'](https://github.com/arnold7800)
