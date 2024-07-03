@@ -26,8 +26,8 @@ The documentation for the project can be found [here](https://github.com/arnold7
 
 ## Tools
 The tools used in the development of Triskelion include:
-- `Python 3.10.6`
-- `Flask`
+- `Python` :  Python is a popular high-level interpreted programming language that is easy to understand, easy to learn, and very flexible. It is the language used to develop Triskelion. [https://www.python.org/](https://www.python.org/)
+- `Flask` : Flask is a lightweight Python web framework used to develop Python-based webapplications as well as Application Programming Interfaces. [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
 
 ## Installation
 
