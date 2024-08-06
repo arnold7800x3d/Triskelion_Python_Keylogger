@@ -35,7 +35,7 @@ def upload_file():
         return 'No selected file', 400 # file selection
     if file:
         filename = file.filename # get filename
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename) # create full path for upload
+        file_path = os.path.join(server.config['UPLOAD_FOLDER'], filename) # create full path for upload
         file.save(file_path) # save file
         if decrypt_file(file_path, key): # decrypt file
             return 'File uploaded and decrypted successfully', 200 # okay
