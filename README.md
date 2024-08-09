@@ -77,7 +77,7 @@ For the project demo, the keylogger executable will be sent as a link to the vic
    ```
    git clone https://github.com/arnold7800x3d/Triskelion_Python_Keylogger.git
    ```
-2) Convert the keylogger program into an executable. This is what will be sent to a victim to download on their device. Make sure you have pyinstaller installed. To install it, run 
+2) Convert the keylogger program into an executable. Before this, ensure the IP address defined in this code is that for the Kali Linux Virtual Machine which is the actor for the remote server. This is what will be sent to a victim to download on their device. Make sure you have pyinstaller installed. To install it, run 
 ```pip install pyinstaller```
 There are two ways to go about this second step:
    (i) Convert the program into an executable which runs in the background with no console window. This is primarily the keylogger's design. To achieve this, open a terminal in the program's directory and run
