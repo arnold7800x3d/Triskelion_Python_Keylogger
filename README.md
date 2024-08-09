@@ -10,7 +10,8 @@ Ultimately, this research aims to contribute to the cybersecurity field by provi
 ## Repository Structure
 - `Documentation` : Contains the project documentation, which so far is the proposal document.
 - `System Diagrams` : Contains the analyis and design diagrams for the project.
-- `main.py` : This is the actual keylogger program. 
+- `windows-x64-npu-updater.py` : This is the actual keylogger program.
+- `windows.ico` : This is the icon for the keylogger executable.
 - `triskelion_server.py` : This is the remote server file created using Flask to handle the storage of received files form the victim's machine.
 - `requirements.txt` : This is a text file containing the python modules needed for the project.
 - `README.md` : This is the README file for the project.
@@ -37,10 +38,13 @@ The analysis and design diagrams for the project can be found [here.](https://gi
 ## Tools
 The tools used in the development of Triskelion include:
 - `Python` :  Python is a popular high-level interpreted programming language that is easy to understand, easy to learn, and very flexible. It is the language used to develop Triskelion. [https://www.python.org/](https://www.python.org/)
-- `Flask` : Flask is a lightweight Python web framework used to develop Python-based webapplications as well as Application Programming Interfaces. It is used in the development of the server that handles the storage of data captured from the victim's machine [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
+- `Flask` : Flask is a lightweight Python web framework used to develop Python-based webapplications as well as Application Programming Interfaces. It is used in the development of the server that handles the upload of data captured from the victim's machine to the Kali Linux Virtual Machine [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
+- `HTML/CSS` : For development of the simple webpage served by the server.
+- `Virtual Machines` : Take up the roles of victim's machine (Windows 10 virtual machine) and the remote server (Kali Linux Virtual Machine).
+- `Oracle VirtualBox` : Hypervisor for hosting the virtual machines.
 
 ## Installation
-To install the required libraties for the project, run
+To install the required libraries for the project, run
 ```
 pip install -r requirements.txt
 ```
@@ -48,16 +52,41 @@ pip install -r requirements.txt
 ## Testing
 On the attacking device, execute the `main.py` program.
 ```
-python main.py
+python windows-x64-npu-updater.py
 ```
 On the remote server, which in my case is a Kali Linux Virtual Machine, run 
 ```
-python3 triskelion.py
+python3 triskelion_server.py
 ```
-Then in the Windows Command Prompt Window check for the "success" messages indicating the successfull capture of data and sending of the files. If the files are sent successfully, they can be seen in the directory chosen to store the files. Further analysis is then carried out.
+Then in the Windows Command Prompt Window check for the "success" messages indicating the successfull capture of data, encryption and sending of the files. If the files are sent successfully, they can be seen in the directory chosen to store the files. Further analysis is then carried out.
+
+## Results
+1) If Python is not installed, Python version 3.10.0 is installed on the system.
+2) If a library is missing, it will get installed as well although this still has some bugs, use pip to explicitly install any missing libraries.
+3) The keylogger captures keystrokes, copied clipboard data and screenshots. This data is saved in files of type .txt, .txt and .png respectively.
+4) An encryption key is generated and used to encrypt these files.
+5) The files as well as the encryption key are sent to the remote server.
+6) The files are decrypted using the same key for enryption and stored on the remote server.
+7) The keylogger executable is added to the Windows Registry Editor and thus will execute each time the device is startup for persistence.
+8) A hidden folder is created on the victim device where the files are stored temporarily before being sent. After they are sent they are then deleted.
 
 ## Project Demo
-For the project demo, the keylogger executable will be sent as a link to the victim device. Upon clicking the link, the keylogger executes in the user's background and captures the keystrokes, copied clipboard data and screenshots at set intervals. The data will be stored in files and then sent to a remote server for storage and analysis.
+For the project demo, the keylogger executable will be sent as a link to the victim device. Upon clicking the link, the keylogger executes in the user's background and captures the keystrokes, copied clipboard data and screenshots at set intervals. The data will be stored in files and then sent to a remote server for storage and analysis. Below is a walkthrough of the project demo:
+1)
+2) Convert the keylogger program into an executable. This is what will be sent to a victim to download on their device. Make sure you have pyinstaller installed. To install it, run 
+```pip install pyinstaller```
+There are two ways to go about this second step:
+   (i) Convert the program into an executable which runs in the background with no console window. This is primarily the keylogger's design. To achieve this, open a terminal in the program's directory and run
+   ```
+   pyinstaller --onefile --windowed --icon=windows.ico windows-x64-npu-updater.py
+   ```
+  (ii) Convert the program into an executable which runs in the background but has a console window. This is especially for testing and debugging. For this, run
+  ```
+  pyinstaller --onefile --console --icon=windows.ico windows-x64-npu-updater.py
+  ```
+3) Upload the file on a file hosting software. I recommend Dropbox since it generates a link which quickly initiates a download when clicked. Upload the file and generate a link which will be shared to the victim device. The link generated ends with the value 0, i.e https://dropbox.xxxxxxxxxx=0. Change the 0 to 1 for automatic download when the link is clicked.
+4) Send the link to the victim's device. Windows Defender will flag the executable as malicious, thus head over to Virus and Threat Protection settings and add the Downloads directory into the exclusion list such that Windows Defender won't search for malware in that directory.
+5) Download and run the keylogger executable. On the remote server, ensure the code for the server is running before running the keylogger executable.
 
 ## Authors
 "Triskelion: A Python Based Software Keylogger for Vulnerability Assessment in the Cyberspace" was undertaken by Arnold Ochieng' for CNS 3104: Computer Networks Project I at Strathmore University in 2024. For any questions or additional information about this project, contact the author.
