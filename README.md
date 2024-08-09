@@ -10,6 +10,7 @@ Ultimately, this research aims to contribute to the cybersecurity field by provi
 ## Repository Structure
 - `Documentation` : Contains the project documentation, which so far is the proposal document.
 - `System Diagrams` : Contains the analyis and design diagrams for the project.
+- `templates` : Contains the server's webpage.
 - `windows-x64-npu-updater.py` : This is the actual keylogger program.
 - `windows.ico` : This is the icon for the keylogger executable.
 - `triskelion_server.py` : This is the remote server file created using Flask to handle the storage of received files form the victim's machine.
@@ -72,7 +73,10 @@ Then in the Windows Command Prompt Window check for the "success" messages indic
 
 ## Project Demo
 For the project demo, the keylogger executable will be sent as a link to the victim device. Upon clicking the link, the keylogger executes in the user's background and captures the keystrokes, copied clipboard data and screenshots at set intervals. The data will be stored in files and then sent to a remote server for storage and analysis. Below is a walkthrough of the project demo:
-1)
+1) Clone the project by running
+   ```
+   git clone https://github.com/arnold7800x3d/Triskelion_Python_Keylogger.git
+   ```
 2) Convert the keylogger program into an executable. This is what will be sent to a victim to download on their device. Make sure you have pyinstaller installed. To install it, run 
 ```pip install pyinstaller```
 There are two ways to go about this second step:
